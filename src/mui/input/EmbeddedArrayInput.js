@@ -15,9 +15,7 @@ import EmbeddedArrayInputFormField from '../form/EmbeddedArrayInputFormField';
 
 const styles = {
     container: {
-        padding: '0 1em 1em 0em',
-        width: '90%',
-        display: 'inline-block',
+        position: 'relative',
     },
     innerContainer: {
         padding: '0 1em 1em 1em',
@@ -39,6 +37,9 @@ const styles = {
         margin: '1em',
         display: 'block',
         textAlign: 'right',
+        position: 'absolute',
+        right: 0,
+        top: 0
     },
 };
 
@@ -123,7 +124,7 @@ export class EmbeddedArrayInput extends Component {
         };
 
         return (
-            <div className="EmbeddedArrayInputItemContainer">
+            <div className="EmbeddedArrayInputItemContainer" style={styles.container}>
                 <div style={styles.innerContainer}>
                     {React.Children.map(
                         inputs,
